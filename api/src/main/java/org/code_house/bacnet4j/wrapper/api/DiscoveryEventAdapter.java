@@ -95,6 +95,13 @@ public class DiscoveryEventAdapter extends DeviceEventAdapter {
         if (d.getVendorName() != null && !d.getVendorName().isEmpty()) {
             device.setVendorName(d.getVendorName());
         }
+        if (d.getVendorIdentifier() != -1) {
+            device.setVendorName(d.getVendorName());
+        }
+        if (d.getCharacterStringProperty(PropertyIdentifier.serialNumber) != null
+        		&& !d.getCharacterStringProperty(PropertyIdentifier.serialNumber).isEmpty()) {
+        	device.setSerialNumber(d.getCharacterStringProperty(PropertyIdentifier.serialNumber));
+        }
         if (d.getName() != null && !d.getName().isEmpty()) {
             device.setName(d.getName());
         }

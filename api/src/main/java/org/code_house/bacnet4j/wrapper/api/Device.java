@@ -39,6 +39,8 @@ public class Device {
 
     private String modelName = "";
     private String vendorName = "";
+    private int vendorIdentifier ;
+    private String serialNumber = "";
     private String name = "";
     private boolean readMultiple;
 
@@ -83,6 +85,22 @@ public class Device {
 
     public String getVendorName() {
         return vendorName;
+    }
+
+    public int getVendorIdentifier() {
+        return vendorIdentifier;
+    }
+
+    public void setVendorIdentifier(int vendorIdentifier) {
+        this.vendorIdentifier = vendorIdentifier;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
     }
 
     public void setName(String name) {
